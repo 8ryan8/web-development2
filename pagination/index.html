@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web - Bootstrap form</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a href="#" class="navbar-brand">Bootstrap Forms</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Registration</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- bootstrapn forms -->
+    <form action="/feedback" method="POST" class="main-form mt-6 needs-validation" novalidate>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+               <label for="username">Username : </label>
+               <input type="text" id="username" class="form-control" placeholder="Enter username" required>
+                <small class="form-text text-muted">This should be Your Username</small>
+                <div class="invalid-feedback">
+                    Please Enter Correct Username.
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email : </label>
+                <input type="email" id="email" class="form-control" placeholder="Enter email" required >
+                <small class="form-text text-muted">This shold be Your Email</small>
+                <div class="invalid-feedback">
+                    Please Enter Correct Email.
+                </div>
+            </div>
+        </div>
+        <div class=" form-row">
+            <div class="form-group col-md">
+                <label for="password">Password : </label>
+                <input type="password" id="password" class="form-control" placeholder="Enter password" required >
+                <div class="invalid-feedback">
+                    Please Enter Correct Password.
+                </div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md">
+                <label for="city">Select Your City</label>
+                <select name="city" id="city" class="form-control" required>
+                    <option value="hyd">Hyderabad</option>
+                    <option value="mum">Mumbai</option>
+                    <option value="del">Delhi</option>
+                    <option value="...">...</option>
+                </select>
+                <div class="invalid-feedback">
+                    Please Provide a valid city.
+                </div>
+            </div>
+        </div>
+        <div class="form-row form-check">
+            <div class="form-group col-md form-check">
+                <input type="checkbox" id="remember-me" class="form-check-input" required >
+                <label for="remember-me" class="form-check-label">Remember Me ?</label>
+                <div class="invalid-feedback">
+                    You must select this remember me.
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row form-check">
+            <div class="form-group col-md form-check">
+                <input type="radio" id="remember-me" class="form-check-input" >
+                <label for="remember-me" class="form-check-label"> Radio </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">
+            Submit
+        </button>
+    </form>
+
+    <nav class="pagination-user" arial-label="User Pagination">
+        <ul class="pagination pagination-lg">
+            <li class="page-item"> 
+                <a href="#" class="page-link" >
+                    <span aril-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="page-item"> 
+                <a href="#" class="page-link">1</a>
+            </li>
+            <li class="page-item"> 
+                <a href="#" class="page-link">2</a>
+            </li>
+            <li class="page-item active"> 
+                <a href="#" class="page-link">3</a>
+            </li>
+            <a href="#" class="page-link" >
+                <span aril-hidden="true">&raquo;</span>
+            </a>
+        </ul>
+
+    </nav>
+
+    <script>
+        var form = document.querySelector('.needs-validation');
+        form.addEventListener('submit',function(event){
+            if(form.checkValidity()===false){
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        })
+    </script>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

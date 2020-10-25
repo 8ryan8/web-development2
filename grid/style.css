@@ -1,0 +1,17 @@
+.bg1{
+    background-color: blue;
+    height: 150px;
+}
+.bg2{
+    background-color: rgb(0, 255, 55);
+    height: 150px;
+}
+.bg3{
+    background-color: rgb(255, 174, 0);
+    height: 150px;
+}
+
+.bg-fluid{
+    background-color: rgb(231, 171, 171);
+    height: 400px;
+}
